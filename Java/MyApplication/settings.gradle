@@ -1,0 +1,2 @@
+include ':app', ':handpointsdk'
+rootProject.name='My Application'

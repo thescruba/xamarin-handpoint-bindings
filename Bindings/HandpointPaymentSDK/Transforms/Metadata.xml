@@ -1,0 +1,12 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <attr path="/api/package[@name='com.handpoint.api.paymentsdk.emv']/class[@name='Transaction']" name="managedName">TransactionWraper</attr>
+  <attr path="/api/package[@name='com.handpoint.api.paymentsdk.emv.telpo']/class[@name='TelpoEmvBridge']/method[@name='checkAndSendGenC' and count(parameter)=2 and parameter[1][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;'] and parameter[2][@type='com.handpoint.api.paymentsdk.callback.SecondGenAcCallback']]" name="visibility">protected</attr>
+</metadata>

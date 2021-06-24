@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1", "App1\App1.csproj", "{46B677B4-3A19-41BC-A796-69C9A7E185B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandpointSdk", "Bindings\HandpointSdk\HandpointSdk.csproj", "{58A4D129-DF32-48C2-947E-0EFC6E989812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandpointPaymentSDK", "Bindings\HandpointPaymentSDK\HandpointPaymentSDK.csproj", "{0E177195-595F-44B3-820D-0C83516CA75E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandpointSDKHelper", "Bindings\HandpointSDKHelper\HandpointSDKHelper.csproj", "{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46B677B4-3A19-41BC-A796-69C9A7E185B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B677B4-3A19-41BC-A796-69C9A7E185B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B677B4-3A19-41BC-A796-69C9A7E185B2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{46B677B4-3A19-41BC-A796-69C9A7E185B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B677B4-3A19-41BC-A796-69C9A7E185B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B677B4-3A19-41BC-A796-69C9A7E185B2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{58A4D129-DF32-48C2-947E-0EFC6E989812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A4D129-DF32-48C2-947E-0EFC6E989812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A4D129-DF32-48C2-947E-0EFC6E989812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A4D129-DF32-48C2-947E-0EFC6E989812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E177195-595F-44B3-820D-0C83516CA75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E177195-595F-44B3-820D-0C83516CA75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E177195-595F-44B3-820D-0C83516CA75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E177195-595F-44B3-820D-0C83516CA75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58A4D129-DF32-48C2-947E-0EFC6E989812} = {9641E83D-30CC-4706-A7C9-7AD0C4F60E3F}
+		{0E177195-595F-44B3-820D-0C83516CA75E} = {9641E83D-30CC-4706-A7C9-7AD0C4F60E3F}
+		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653} = {9641E83D-30CC-4706-A7C9-7AD0C4F60E3F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5329801-B55D-446D-809B-89D9B401EAD5}
+	EndGlobalSection
+EndGlobal

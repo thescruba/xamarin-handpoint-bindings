@@ -1,0 +1,64 @@
+﻿<metadata>
+  <!--
+  This is hack for sdk https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
+  -->
+
+ <add-node path="/api/package[@name='com.handpoint.api']">
+  <class abstract="false" deprecated="not deprecated" final="false" name="AndroidPaymentConnection" static="true" visibility="public" extends="java.lang.Object">
+  </class>
+</add-node>
+
+<attr path="/api/package[@name='com.handpoint.api']/class[@name='BuildingRule']" name="visibility">public</attr>
+<attr path="/api/package[@name='com.handpoint.api']/class[@name='Frame']" name="visibility">public</attr>
+<remove-node path="/api/package[@name='com.handpoint.api']/class[@name='HardwareMonitor']" />
+<attr path="/api/package[@name='com.handpoint.api']/class[@name='Connection']" name="visibility">public</attr>
+
+  <!--
+  This is hack for object shared https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
+  -->
+<remove-node path="/api/package[@name='com.handpoint.api.shared.agreements']/class[@name='MerchantAuth']/method[@name='size' and count(parameter)=0]" />
+<remove-node path="/api/package[@name='com.handpoint.api.shared.analytics.providers']/class[@name='NoPropertiesProvider']"/>
+<remove-node path="/api/package[@name='com.handpoint.api.shared.analytics.providers']/class[@name='SimplePropertiesProvider']"/>
+
+<!--
+  This is hack for networking shared https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
+  -->
+
+<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='keySet' and count(parameter)=0]" />
+<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='entrySet' and count(parameter)=0]" />
+<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='size' and count(parameter)=0]" />
+<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='values' and count(parameter)=0]" />
+
+<!--
+  This is hack for PAX shared https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
+  -->
+
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cCertVerify' and count(parameter)=0]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cEMVAdviceProc' and count(parameter)=0]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cEMVGetHolderPwd' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='byte[]']]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cEMVInputAmount' and count(parameter)=1 and parameter[1][@type='long[]']]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cEMVSetParam' and count(parameter)=0]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cEMVUnknowTLVData' and count(parameter)=2 and parameter[1][@type='short'] and parameter[2][@type='com.pax.jemv.clcommon.ByteArray']]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cEMVVerifyPINOK' and count(parameter)=0]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cEMVWaitAppSel' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='com.pax.jemv.clcommon.EMV_APPLIST[]'] and parameter[3][@type='int']]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cRFU1' and count(parameter)=0]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cRFU2' and count(parameter)=0]" name="visibility">protected</attr>
+<attr path="/api/package[@name='com.pax.jemv.emv.api']/class[@name='EMVCallback']/method[@name='cEMVVerifyPINfailed' and count(parameter)=1 and parameter[1][@type='byte[]']]" name="visibility">protected</attr>
+
+<remove-node path="/api/package[starts-with (@name, 'com.google.gson')]" />
+<remove-node path="/api/package[starts-with (@name, 'io.jsonwebtoken')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.fasterxml.jackson')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.pax.market.api.sdk')]" />
+<attr path="/api/package[@name='com.pax.dal']/interface[@name='IPrinter.IPinterListener']/method[@name='onError' and count(parameter)=1 and parameter[1][@type='int']]" name="managedName">err</attr>
+<remove-node path="/api/package[@name='com.pax.jemv.clcommon']/class[@name='KernType']/field[@name='kernType']"></remove-node>
+
+<attr path="/api/package[@name='com.pax.dal']/interface[@name='IScanner.IScanListener']/method[@name='onRead' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedName">p0Field</attr>
+<attr path="/api/package[@name='com.pax.dal']/interface[@name='IIDReaderEx.IDReaderExListener']/method[@name='onSuccess' and count(parameter)=1 and parameter[1][@type='com.pax.dal.entity.IDReadResult']]" name="managedName">readResult</attr>
+<attr path="/api/package[@name='com.pax.dal']/interface[@name='IIDReaderEx.IDReaderExListener']/method[@name='onError' and count(parameter)=1 and parameter[1][@type='int']]" name="managedName">errorCode</attr>
+
+  <attr path="/api/package[@name='com.handpoint.api']/class[@name='AndroidConnectionManager']/method[@name='isHardwareReady' and count(parameter)=1 and parameter[1][@type='com.handpoint.api.shared.ConnectionMethod']]" name="visibility">protected</attr>
+  <attr path="/api/package[@name='com.handpoint.api']/class[@name='AndroidConnectionManager']/method[@name='getConnectionByType' and count(parameter)=1 and parameter[1][@type='com.handpoint.api.shared.Device']]" name="visibility">protected</attr>
+  <remove-node path="/api/package[@name='org.jacoco.agent.rt.internal_8ff85ea.core.internal.instr']/class[@name='ClassInstrumenter']" />
+  <remove-node path="/api/package[@name='org.jacoco.agent.rt.internal_8ff85ea.core.data']/class[@name='SessionInfo']" />
+  
+</metadata>
