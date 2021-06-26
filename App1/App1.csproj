@@ -37,7 +37,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -117,11 +116,25 @@
     <PackageReference Include="Xamarin.Kotlin.StdLib">
       <Version>1.5.10</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout">
+      <Version>2.0.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
+      <Version>2.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bindings\HandpointSdk\HandpointSdk.csproj">
       <Project>{58A4D129-DF32-48C2-947E-0EFC6E989812}</Project>
       <Name>HandpointSdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bindings\HandpointPaymentSDK\HandpointPaymentSDK.csproj">
+      <Project>{0E177195-595F-44B3-820D-0C83516CA75E}</Project>
+      <Name>HandpointPaymentSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bindings\HandpointSDKHelper\HandpointSDKHelper.csproj">
+      <Project>{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}</Project>
+      <Name>HandpointSDKHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

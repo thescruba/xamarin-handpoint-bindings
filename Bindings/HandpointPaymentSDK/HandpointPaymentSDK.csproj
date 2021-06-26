@@ -79,6 +79,64 @@
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
       <Version>28.0.0.3</Version>
     </PackageReference>
+    <PackageReference Include="Square.OkHttp3">
+      <Version>4.9.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\autolink-0.10.0.jar" />
+    <EmbeddedJar Include="Jars\rxjava-2.0.1.jar" />
+    <EmbeddedJar Include="Jars\converter-jackson-2.9.0.jar" />
+    <EmbeddedJar Include="Jars\retrofit-2.9.0.jar" />
+    <EmbeddedJar Include="Jars\zkandroididcardreader-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\zkandroidfpreader-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\zkandroidcore-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\telpo_api.jar" />
+    <EmbeddedJar Include="Jars\printing-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\org.jacoco.agent-0.7.9-runtime.jar" />
+    <EmbeddedJar Include="Jars\object-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\networking-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\libraries-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\emv_pro4.0.jar" />
+    <EmbeddedJar Include="Jars\crypto-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\applicationprovider-6.1.1.jar" />
+    <EmbeddedJar Include="Jars\WAVE_v100.jar" />
+    <EmbeddedJar Include="Jars\QPBOC_v100.jar" />
+    <EmbeddedJar Include="Jars\PURE_v100.jar" />
+    <EmbeddedJar Include="Jars\NeptuneLiteApi_V3.12.00_20200331.jar" />
+    <EmbeddedJar Include="Jars\MC_v100.jar" />
+    <EmbeddedJar Include="Jars\JCB_v100.jar" />
+    <EmbeddedJar Include="Jars\GLPage_V1.03.00_20181030.jar" />
+    <EmbeddedJar Include="Jars\FireCrasher-2.0.0-sources.jar" />
+    <EmbeddedJar Include="Jars\FLASH_v101.jar" />
+    <EmbeddedJar Include="Jars\Entry_v103.jar" />
+    <EmbeddedJar Include="Jars\EMV_v103.jar" />
+    <EmbeddedJar Include="Jars\DPAS_v100.jar" />
+    <EmbeddedJar Include="Jars\DEVICE_v103.jar" />
+    <EmbeddedJar Include="Jars\COMMON_v101.jar" />
+    <EmbeddedJar Include="Jars\AE_v101.jar" />
+    <EmbeddedJar Include="Jars\woodstox-core-6.2.3.jar" />
+    <EmbeddedJar Include="Jars\jackson-databind-2.12.1.jar" />
+    <EmbeddedJar Include="Jars\jakarta.xml.bind-api-2.3.2.jar" />
+    <EmbeddedJar Include="Jars\jakarta.activation-api-1.2.1.jar" />
+    <EmbeddedJar Include="Jars\jackson-core-2.12.1.jar" />
+    <EmbeddedJar Include="Jars\jackson-annotations-2.12.1.jar" />
+    <EmbeddedJar Include="Jars\stax2-api-4.2.1.jar" />
+    <EmbeddedJar Include="Jars\jackson-module-jaxb-annotations-2.12.1.jar" />
+    <EmbeddedJar Include="Jars\jsr250-api-1.0.jar" />
+    <EmbeddedJar Include="Jars\stax-api-1.0-2.jar" />
+    <EmbeddedJar Include="Jars\client-2.1.0.jar" />
+    <EmbeddedJar Include="Jars\handpoint-txnfeed-client-2.0.0-RC.0.jar" />
+    <EmbeddedJar Include="Jars\jackson-module-kotlin-2.12.1.jar" />
+    <EmbeddedJar Include="Jars\ops-client-2.1.0.jar" />
+    <EmbeddedJar Include="Jars\jackson-dataformat-xml-2.12.1.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedNativeLibrary Include="Libs\armeabi-v7a\libMposJni.so" />
+    <EmbeddedNativeLibrary Include="Libs\armeabi-v7a\libSerialPort.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libs\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -31,7 +31,7 @@ namespace JustTouchMobile.Droid.HandPoint {
 			HandpointCredentials handpointCredentials = new HandpointCredentials(sharedKey);
 
 			this.api = HapiFactory.GetAsyncInterface(this, Application.Context, handpointCredentials);
-			Device device = new Device("some name", "address", "", ConnectionMethod.AndroidPayment);
+            Device device = new Device("some name", "address", "", ConnectionMethod.AndroidPayment);
 			this.api.Connect(device);
 		}
 
