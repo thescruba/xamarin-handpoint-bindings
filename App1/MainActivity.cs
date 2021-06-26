@@ -15,7 +15,7 @@ namespace App1
     public class MainActivity : AppCompatActivity
     {
 
-        private HandPointSDKWrapper _handPointSDKWrapper = new HandPointSDKWrapper();
+        private HandPointSDKWrapper _handPointSDKWrapper;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -29,7 +29,7 @@ namespace App1
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
 
-            _handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
+            
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -51,9 +51,9 @@ namespace App1
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (View.IOnClickListener)null).Show();
+            _handPointSDKWrapper = new HandPointSDKWrapper(this.ApplicationContext);
+            _handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
+            _handPointSDKWrapper.Sale(1000);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

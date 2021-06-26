@@ -85,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedJar Include="Jars\autolink-0.10.0.jar" />
-    <EmbeddedJar Include="Jars\rxjava-2.0.1.jar" />
     <EmbeddedJar Include="Jars\converter-jackson-2.9.0.jar" />
     <EmbeddedJar Include="Jars\retrofit-2.9.0.jar" />
     <EmbeddedJar Include="Jars\zkandroididcardreader-6.1.1.jar" />
@@ -130,6 +129,11 @@
     <EmbeddedJar Include="Jars\jackson-module-kotlin-2.12.1.jar" />
     <EmbeddedJar Include="Jars\ops-client-2.1.0.jar" />
     <EmbeddedJar Include="Jars\jackson-dataformat-xml-2.12.1.jar" />
+    <EmbeddedJar Include="Jars\reactive-streams-1.0.3.jar" />
+    <EmbeddedJar Include="Jars\rxjava-3.0.13.jar" />
+    <EmbeddedJar Include="Jars\rxkotlin-3.0.1.jar" />
+    <EmbeddedJar Include="Jars\rxandroid-3.0.0.jar" />
+    <EmbeddedJar Include="Jars\rxjava-2.2.21.jar" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedNativeLibrary Include="Libs\armeabi-v7a\libMposJni.so" />

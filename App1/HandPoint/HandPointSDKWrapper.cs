@@ -16,6 +16,11 @@ namespace JustTouchMobile.Droid.HandPoint {
 	class HandPointSDKWrapper : Java.Lang.Object, IPayments, Com.Handpoint.Api.Shared.Events.IRequired, Com.Handpoint.Api.Shared.Events.IConnectionStatusChanged, Com.Handpoint.Api.Shared.Events.ICurrentTransactionStatus {
 		
 		private Hapi api;
+        private Context mContext;
+
+        public HandPointSDKWrapper(Context context) {
+            mContext = context;
+        }
 
         public void AddEventHandler(System.EventHandler eventHandler) {
             throw new NotImplementedException();
@@ -30,9 +35,16 @@ namespace JustTouchMobile.Droid.HandPoint {
 
 			HandpointCredentials handpointCredentials = new HandpointCredentials(sharedKey);
 
-			this.api = HapiFactory.GetAsyncInterface(this, Application.Context, handpointCredentials);
-            Device device = new Device("some name", "address", "", ConnectionMethod.AndroidPayment);
-			this.api.Connect(device);
+            try
+            {
+                this.api = HapiFactory.GetAsyncInterface(this, mContext, handpointCredentials);
+                Device device = new Device("some name", "address", "", ConnectionMethod.AndroidPayment);
+                this.api.Connect(device);
+
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex);
+            }
 		}
 
 		public bool Print(string html) {
@@ -47,8 +59,9 @@ namespace JustTouchMobile.Droid.HandPoint {
 
 
         public bool Sale(decimal amount) {
-			throw new NotImplementedException();
-			//this.api.Sale();
+
+           Java.Math.BigInteger bigInteger = new Java.Math.BigInteger(amount.ToString());
+           return this.api.Sale(bigInteger, Currency.Usd);
 		}
 
         public void DeviceDiscoveryFinished(IList<Device> devices) {

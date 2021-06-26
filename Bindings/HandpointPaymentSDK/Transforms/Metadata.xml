@@ -24,6 +24,8 @@
 <remove-node path="/api/package[starts-with (@name, 'com.squareup.retrofit2')]" />
 <remove-node path="/api/package[starts-with (@name, 'io.reactivex')]" />
 <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.paymentsdk')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.reactivestreams')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.nibor.autolink')]" />
 
   <!--
   This is hack for sdk https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
