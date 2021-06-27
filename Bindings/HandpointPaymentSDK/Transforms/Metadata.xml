@@ -26,6 +26,31 @@
 <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.paymentsdk')]" />
 <remove-node path="/api/package[starts-with (@name, 'org.reactivestreams')]" />
 <remove-node path="/api/package[starts-with (@name, 'org.nibor.autolink')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.sun.xml')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.google.protobuf')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.google.protobuf')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.squareup.javapoet')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.x5')]" />
+<remove-node path="/api/package[starts-with (@name, 'net.minidev')]" />
+<remove-node path="/api/package[starts-with (@name, 'okhttp3')]" />
+<remove-node path="/api/package[starts-with (@name, 'okio')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.apache')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.jvnet')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.threeten')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.w3c')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.xml')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.osama')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.j256.ormlite')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.squareup')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.izettle')]" />
+
+<remove-node path="/api/package[starts-with (@name, 'org.jsoup')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.objectweb')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.slf4j')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.bouncycastle')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.java_websocket')]" />
+<remove-node path="/api/package[starts-with (@name, 'org.jdom2')]" />
+
 
   <!--
   This is hack for sdk https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
@@ -90,4 +115,11 @@
 
   <attr path="/api/package[@name='com.handpoint.api.paymentsdk.emv']/class[@name='Transaction']" name="managedName">TransactionWraper</attr>
   <attr path="/api/package[@name='com.handpoint.api.paymentsdk.emv.telpo']/class[@name='TelpoEmvBridge']/method[@name='checkAndSendGenC' and count(parameter)=2 and parameter[1][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;'] and parameter[2][@type='com.handpoint.api.paymentsdk.callback.SecondGenAcCallback']]" name="visibility">protected</attr>
+
+  <remove-node path="/api/package[@name='com.handpoint.api']/class[@name='CloudApiClient']"/>
+  
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.cloud')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.txnfeed')]" />
+  
+
 </metadata>

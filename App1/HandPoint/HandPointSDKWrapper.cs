@@ -60,8 +60,13 @@ namespace JustTouchMobile.Droid.HandPoint {
 
         public bool Sale(decimal amount) {
 
-           Java.Math.BigInteger bigInteger = new Java.Math.BigInteger(amount.ToString());
-           return this.api.Sale(bigInteger, Currency.Usd);
+            if (this.api != null)
+            {
+                Java.Math.BigInteger bigInteger = new Java.Math.BigInteger(amount.ToString());
+                return this.api.Sale(bigInteger, Currency.Usd);
+            }
+
+            return false;
 		}
 
         public void DeviceDiscoveryFinished(IList<Device> devices) {
@@ -81,7 +86,7 @@ namespace JustTouchMobile.Droid.HandPoint {
         }
 
         public void ConnectionStatusChanged(ConnectionStatus status, Device device) {
-            throw new NotImplementedException();
+
         }
 
         public void CurrentTransactionStatus(StatusInfo info, Device device) {
