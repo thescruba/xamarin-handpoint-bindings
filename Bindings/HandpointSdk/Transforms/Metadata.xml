@@ -14,22 +14,4 @@
 <remove-node path="/api/package[@name='com.handpoint.api']/class[@name='HardwareMonitor']" />
 <attr path="/api/package[@name='com.handpoint.api']/class[@name='Connection']" name="visibility">public</attr>
 
-  <!--
-  This is hack for object shared https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
-  -->
-<remove-node path="/api/package[@name='com.handpoint.api.shared.agreements']/class[@name='MerchantAuth']/method[@name='size' and count(parameter)=0]" />
-<remove-node path="/api/package[@name='com.handpoint.api.shared.analytics.providers']/class[@name='NoPropertiesProvider']"/>
-<remove-node path="/api/package[@name='com.handpoint.api.shared.analytics.providers']/class[@name='SimplePropertiesProvider']"/>
-
-<!--
-  This is hack for networking shared https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
-  -->
-
-<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='keySet' and count(parameter)=0]" />
-<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='entrySet' and count(parameter)=0]" />
-<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='size' and count(parameter)=0]" />
-<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='values' and count(parameter)=0]" />
-
-<remove-node path="/api/package[@name='com.handpoint.api']/class[@name='CloudApiClient']"/>
-
 </metadata>

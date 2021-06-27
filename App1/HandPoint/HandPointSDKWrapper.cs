@@ -33,7 +33,7 @@ namespace JustTouchMobile.Droid.HandPoint {
 
 			//Please reference same code here https://www.handpoint.com/docs/device/Android/6.1.0/
 
-			HandpointCredentials handpointCredentials = new HandpointCredentials(sharedKey);
+			HandpointCredentials handpointCredentials = new HandpointCredentials("");
 
             try
             {
