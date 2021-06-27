@@ -11,7 +11,7 @@ using JustTouchMobile.Droid.HandPoint;
 
 namespace App1
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleTask)]
+    [Activity(Name = "com.companyname.app1.MainActivity", Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
 
@@ -29,8 +29,7 @@ namespace App1
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
 
-            _handPointSDKWrapper = new HandPointSDKWrapper(this);
-            _handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
+            
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -52,6 +51,8 @@ namespace App1
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
+            _handPointSDKWrapper = new HandPointSDKWrapper(this.ApplicationContext);
+            _handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
             _handPointSDKWrapper.Sale(1000);
         }
 

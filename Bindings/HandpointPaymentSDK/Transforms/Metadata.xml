@@ -44,22 +44,6 @@
 <remove-node path="/api/package[starts-with (@name, 'org.bouncycastle')]" />
 <remove-node path="/api/package[starts-with (@name, 'org.java_websocket')]" />
 <remove-node path="/api/package[starts-with (@name, 'org.jdom2')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.pusher')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.sun')]" />
-<remove-node path="/api/package[starts-with (@name, 'gnu.trove')]" />
-<remove-node path="/api/package[starts-with (@name, 'groovy')]" />
-<remove-node path="/api/package[starts-with (@name, 'io.swagger')]" />
-<remove-node path="/api/package[starts-with (@name, 'it.unimi')]" />
-<remove-node path="/api/package[starts-with (@name, 'junit')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.abego')]" />
-
-<remove-node path="/api/package[starts-with (@name, 'org.checkerframework.')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.stringtemplate')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.antlr')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.hamcrest')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.junit')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.json')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.mozilla')]" />
 <remove-node path="/api/package[starts-with (@name, 'com.google.protobuf')]" />
 
 
@@ -80,22 +64,12 @@
 <remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='size' and count(parameter)=0]" />
 <remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='values' and count(parameter)=0]" />
 
+<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.cloud')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.txnfeed')]" />
 
-<attr path="/api/package[@name='com.handpoint.api']/class[@name='AndroidConnectionManager']/method[@name='isHardwareReady' and count(parameter)=1 and parameter[1][@type='com.handpoint.api.shared.ConnectionMethod']]" name="visibility">protected</attr>
-<attr path="/api/package[@name='com.handpoint.api']/class[@name='AndroidConnectionManager']/method[@name='getConnectionByType' and count(parameter)=1 and parameter[1][@type='com.handpoint.api.shared.Device']]" name="visibility">protected</attr>
-<remove-node path="/api/package[@name='org.jacoco.agent.rt.internal_8ff85ea.core.internal.instr']/class[@name='ClassInstrumenter']" />
-<remove-node path="/api/package[@name='org.jacoco.agent.rt.internal_8ff85ea.core.data']/class[@name='SessionInfo']" />
-
-<remove-node path="/api/package[@name='com.handpoint.api']/class[@name='CloudApiClient']"/>
-
-
-  <attr path="/api/package[@name='com.handpoint.api.paymentsdk.emv']/class[@name='Transaction']" name="managedName">TransactionWraper</attr>
-  <attr path="/api/package[@name='com.handpoint.api.paymentsdk.emv.telpo']/class[@name='TelpoEmvBridge']/method[@name='checkAndSendGenC' and count(parameter)=2 and parameter[1][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;'] and parameter[2][@type='com.handpoint.api.paymentsdk.callback.SecondGenAcCallback']]" name="visibility">protected</attr>
-
-  <remove-node path="/api/package[@name='com.handpoint.api']/class[@name='CloudApiClient']"/>
-  
-  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.cloud')]" />
-  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.txnfeed')]" />
-  
+<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.printing')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.shared.networking')]" />
+<remove-node path="/api/package[starts-with (@name, 'com.handpoint.utils')]" />
+<remove-node path="/api/package[starts-with (@name, 'okhttp3')]" />
 
 </metadata>
