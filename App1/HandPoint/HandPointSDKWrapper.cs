@@ -33,7 +33,7 @@ namespace JustTouchMobile.Droid.HandPoint {
 
 			//Please reference same code here https://www.handpoint.com/docs/device/Android/6.1.0/
 
-			HandpointCredentials handpointCredentials = new HandpointCredentials("");
+			HandpointCredentials handpointCredentials = new HandpointCredentials(sharedKey);
 
             try
             {
@@ -86,7 +86,6 @@ namespace JustTouchMobile.Droid.HandPoint {
         }
 
         public void ConnectionStatusChanged(ConnectionStatus status, Device device) {
-
         }
 
         public void CurrentTransactionStatus(StatusInfo info, Device device) {
