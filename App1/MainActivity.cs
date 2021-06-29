@@ -8,10 +8,12 @@ using AndroidX.AppCompat.App;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.Snackbar;
 using JustTouchMobile.Droid.HandPoint;
+using Android.Content;
+using Com.Handpoint.Api.Applicationprovider;
 
 namespace App1
 {
-    [Activity(Name = "com.companyname.app1.MainActivity", Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Name = "com.companyname.apphandpoint.MainActivity", Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
 
@@ -29,8 +31,9 @@ namespace App1
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
 
-            
+            var needtobecallhere = ApplicationProviderKt.Application;
         }
+      
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

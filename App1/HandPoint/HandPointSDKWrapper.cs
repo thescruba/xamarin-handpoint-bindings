@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Com.Handpoint.Api;
 using Com.Handpoint.Api.Shared;
+using Com.Justtouchmobile.Handpointsdk;
 using Java.Interop;
 using JustTouchMobile.Services.Payments;
 using System;
@@ -37,7 +38,7 @@ namespace JustTouchMobile.Droid.HandPoint {
 
             try
             {
-                this.api = HapiFactory.GetAsyncInterface(this, mContext, handpointCredentials);
+                this.api = HapiFactory.GetAsyncInterface(this, mContext.ApplicationContext, handpointCredentials);
                 Device device = new Device("some name", "address", "", ConnectionMethod.AndroidPayment);
                 this.api.Connect(device);
 
@@ -48,8 +49,7 @@ namespace JustTouchMobile.Droid.HandPoint {
 		}
 
 		public bool Print(string html) {
-			throw new NotImplementedException();
-			//this.api.PrintReceipt();
+			return this.api.PrintReceipt (html);
 		}
 
 		public bool Refund(decimal amount) {
@@ -70,26 +70,26 @@ namespace JustTouchMobile.Droid.HandPoint {
 		}
 
         public void DeviceDiscoveryFinished(IList<Device> devices) {
-            throw new NotImplementedException();
+
         }
 
         public void EndOfTransaction(TransactionResult result, Device device) {
-            throw new NotImplementedException();
+            
         }
 
         public void TransactionResultReady(TransactionResult transactionResult, Device device) {
-            throw new NotImplementedException();
+            
         }
 
         public void SignatureRequired(SignatureRequest request, Device device) {
-            throw new NotImplementedException();
+           
         }
 
         public void ConnectionStatusChanged(ConnectionStatus status, Device device) {
         }
 
         public void CurrentTransactionStatus(StatusInfo info, Device device) {
-            throw new NotImplementedException();
+          
         }
     }
 }

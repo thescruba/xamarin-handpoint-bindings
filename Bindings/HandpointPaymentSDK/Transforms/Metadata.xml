@@ -20,7 +20,9 @@
 <remove-node path="/api/package[starts-with (@name, 'retrofit2')]" />
 <remove-node path="/api/package[starts-with (@name, 'com.vladium.emma')]" />
 <remove-node path="/api/package[starts-with (@name, 'com.pax.nep')]" />
-<remove-node path="/api/package[starts-with (@name, 'io.reactivex')]" />
+<remove-node path="/api/package[starts-with (@name, 'io.reactivex.internal')]" />
+<remove-node path="/api/package[starts-with (@name, 'io.reactivex.subjects')]" />
+<remove-node path="/api/package[starts-with (@name, 'io.reactivex.observers')]" />
 <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.paymentsdk')]" />
 <remove-node path="/api/package[starts-with (@name, 'org.reactivestreams')]" />
 <remove-node path="/api/package[starts-with (@name, 'org.nibor.autolink')]" />
@@ -45,7 +47,6 @@
 <remove-node path="/api/package[starts-with (@name, 'org.java_websocket')]" />
 <remove-node path="/api/package[starts-with (@name, 'org.jdom2')]" />
 <remove-node path="/api/package[starts-with (@name, 'com.google.protobuf')]" />
-
 
 
   <!--

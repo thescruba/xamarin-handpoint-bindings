@@ -36,11 +36,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
     <AndroidSupportedAbis>armeabi-v7a</AndroidSupportedAbis>
-    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
     <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -169,6 +168,10 @@
     <ProjectReference Include="..\Bindings\HandpointPaymentSDK\HandpointPaymentSDK.csproj">
       <Project>{0E177195-595F-44B3-820D-0C83516CA75E}</Project>
       <Name>HandpointPaymentSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bindings\HandpointSDKHelper\HandpointSDKHelper.csproj">
+      <Project>{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}</Project>
+      <Name>HandpointSDKHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
