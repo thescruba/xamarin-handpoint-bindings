@@ -56,7 +56,7 @@ namespace App1
         {
             _handPointSDKWrapper = new HandPointSDKWrapper(this.ApplicationContext);
             _handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
-            _handPointSDKWrapper.Sale(1000);
+            //_handPointSDKWrapper.Sale(1000);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

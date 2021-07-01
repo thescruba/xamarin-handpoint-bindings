@@ -1,0 +1,2 @@
+rootProject.name = "Handpoint SDK Example"
+include ':app'

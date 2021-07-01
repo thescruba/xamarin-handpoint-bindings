@@ -40,6 +40,12 @@
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+    <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -161,17 +167,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bindings\HandpointSdk\HandpointSdk.csproj">
-      <Project>{58A4D129-DF32-48C2-947E-0EFC6E989812}</Project>
-      <Name>HandpointSdk</Name>
+    <ProjectReference Include="..\Bindings\HandpointPaymentSDK.Debug\HandpointPaymentSDK.Debug.csproj">
+      <Project>{9e0fc3ca-2c51-467e-b12e-79380b2900e2}</Project>
+      <Name>HandpointPaymentSDK.Debug</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Bindings\HandpointPaymentSDK\HandpointPaymentSDK.csproj">
-      <Project>{0E177195-595F-44B3-820D-0C83516CA75E}</Project>
-      <Name>HandpointPaymentSDK</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Bindings\HandpointSDKHelper\HandpointSDKHelper.csproj">
-      <Project>{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}</Project>
-      <Name>HandpointSDKHelper</Name>
+    <ProjectReference Include="..\Bindings\HandpointSdk.Debug\HandpointSdk.Debug.csproj">
+      <Project>{a7fcdfe2-49fd-4cb0-a68f-41d74d698af6}</Project>
+      <Name>HandpointSdk.Debug</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

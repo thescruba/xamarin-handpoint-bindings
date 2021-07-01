@@ -6,7 +6,6 @@ using Android.Views;
 using Android.Widget;
 using Com.Handpoint.Api;
 using Com.Handpoint.Api.Shared;
-using Com.Justtouchmobile.Handpointsdk;
 using Java.Interop;
 using JustTouchMobile.Services.Payments;
 using System;
@@ -32,14 +31,22 @@ namespace JustTouchMobile.Droid.HandPoint {
 
 		public void InitPayment(string sharedKey) {
 
-			//Please reference same code here https://www.handpoint.com/docs/device/Android/6.1.0/
+            //Please reference same code here https://www.handpoint.com/docs/device/Android/6.1.0/
 
-			HandpointCredentials handpointCredentials = new HandpointCredentials(sharedKey);
+            var cloudKey = "M9KC2NP-632MZZZ-KH6EMM5-WVMYYTM";
+
+            HandpointCredentials handpointCredentials = new HandpointCredentials(sharedKey);
 
             try
             {
                 this.api = HapiFactory.GetAsyncInterface(this, mContext.ApplicationContext, handpointCredentials);
-                Device device = new Device("some name", "address", "", ConnectionMethod.AndroidPayment);
+
+                // this is connect directly to to device
+                Device device = new Device("LocalDevice", "0821638950-PAXA920", "", ConnectionMethod.AndroidPayment);
+                
+                // this is to connect to the handpoint payment app via the cloud
+                //Device device = new Device("Cloud Device", "0821638950-PAXA920", "", ConnectionMethod.Cloud);
+                
                 this.api.Connect(device);
 
             }
@@ -86,10 +93,17 @@ namespace JustTouchMobile.Droid.HandPoint {
         }
 
         public void ConnectionStatusChanged(ConnectionStatus status, Device device) {
+            Console.WriteLine($"ConnectionStatusChanged - {status}");
+            
+            if (status == ConnectionStatus.Connected) {
+                Sale(100);
+            }
+
         }
 
         public void CurrentTransactionStatus(StatusInfo info, Device device) {
-          
+            Console.WriteLine($"CurrentTransactionStatus - {info}");
+
         }
     }
 }
