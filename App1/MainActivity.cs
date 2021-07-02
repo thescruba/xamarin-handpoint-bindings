@@ -54,7 +54,7 @@ namespace App1
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            _handPointSDKWrapper = new HandPointSDKWrapper(this.ApplicationContext);
+            _handPointSDKWrapper = new HandPointSDKWrapper(this);
             _handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
             //_handPointSDKWrapper.Sale(1000);
         }

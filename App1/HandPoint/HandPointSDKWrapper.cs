@@ -39,7 +39,8 @@ namespace JustTouchMobile.Droid.HandPoint {
 
             try
             {
-                this.api = HapiFactory.GetAsyncInterface(this, mContext.ApplicationContext, handpointCredentials);
+                this.api = HapiFactory.GetAsyncInterface(this, mContext, handpointCredentials);
+                //this.api.SetLogLevel(LogLevel.Debug);
 
                 // this is connect directly to to device
                 Device device = new Device("LocalDevice", "0821638950-PAXA920", "", ConnectionMethod.AndroidPayment);

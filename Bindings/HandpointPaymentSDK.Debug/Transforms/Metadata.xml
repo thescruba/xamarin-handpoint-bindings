@@ -65,12 +65,23 @@
 <remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='size' and count(parameter)=0]" />
 <remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='values' and count(parameter)=0]" />
 
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.cloud')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.txnfeed')]" />
 
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.printing')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.shared.networking')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.utils')]" />
+  <!-- There are also some methods that need to have their generic _parameter_ types simplified to `java.lang.Object`.
+         Possible error message: Error CS0115: `SomeMethod(..., T, ...)' is marked as an override but no suitable method found to override (CS0115)
+         Possible error message: Error CS0535: `SomeClass' does not implement interface member `SomeMethod(..., Java.Lang.Object,...)' (CS0535)
+         Possible error message: Error CS0534: `SomeClass' does not implement inherited abstract member `SomeMethod(..., Java.Lang.Object,...)' (CS0534)
+<attr path="/api/package[@name='com.socialize.api']/class[@name='SocializeApi.AsyncAuthenicator']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='com.socialize.api.SocializeRequest']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+<attr path="/api/package[@name='com.socialize.api']/class[@name='SocializeApi.AsyncGetter']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='com.socialize.api.SocializeRequest']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+<attr path="/api/package[@name='com.socialize.api']/class[@name='SocializeApi.AsyncPutter']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='com.socialize.api.SocializeRequest']]/parameter[1]" name="managedType">Java.Lang.Object</attr>  -->
+
+
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.cloud')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.txnfeed')]" />
+
+  <!-- <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.shared.networking')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.printing')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.utils')]" /> -->
+
 <remove-node path="/api/package[starts-with (@name, 'okhttp3')]" />
 
 </metadata>
