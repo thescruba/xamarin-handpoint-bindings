@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using Android.App;
 using Android.Runtime;
 using IO.Reactivex.Functions;
@@ -22,6 +23,12 @@ namespace App1
             base.OnCreate();
 
             RxJavaPlugins.ErrorHandler = this;
+
+            //System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+
+            ServicePointManager
+                            .ServerCertificateValidationCallback +=
+                            (sender, cert, chain, sslPolicyErrors) => true;
         }
     }
 }

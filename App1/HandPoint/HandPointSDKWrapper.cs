@@ -40,11 +40,10 @@ namespace JustTouchMobile.Droid.HandPoint {
             try
             {
                 this.api = HapiFactory.GetAsyncInterface(this, mContext, handpointCredentials);
-                //this.api.SetLogLevel(LogLevel.Debug);
+                this.api.SetLogLevel(LogLevel.Debug);
 
                 // this is connect directly to to device
                 Device device = new Device("LocalDevice", "0821638950-PAXA920", "", ConnectionMethod.AndroidPayment);
-                
                 // this is to connect to the handpoint payment app via the cloud
                 //Device device = new Device("Cloud Device", "0821638950-PAXA920", "", ConnectionMethod.Cloud);
                 
