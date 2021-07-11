@@ -13,7 +13,7 @@ using Com.Handpoint.Api.Applicationprovider;
 
 namespace App1
 {
-    [Activity(Name = "com.companyname.apphandpoint.MainActivity", Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Name = "com.companyname.apphandpoint.MainActivity", Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleTask )]
     public class MainActivity : AppCompatActivity
     {
 
@@ -32,6 +32,9 @@ namespace App1
             fab.Click += FabOnClick;
 
             var needtobecallhere = ApplicationProviderKt.Application;
+
+            _handPointSDKWrapper = new HandPointSDKWrapper(this);
+            _handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
         }
       
 
@@ -54,9 +57,9 @@ namespace App1
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            _handPointSDKWrapper = new HandPointSDKWrapper(this);
-            _handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
-            //_handPointSDKWrapper.Sale(1000);
+            //_handPointSDKWrapper = new HandPointSDKWrapper(this);
+            //_handPointSDKWrapper.InitPayment("5FC9200DEE75F8AB2D37B6D74E7ECB075EEA69625DCFCEC37A9A42670E16960B");
+            _handPointSDKWrapper.Sale(1000);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

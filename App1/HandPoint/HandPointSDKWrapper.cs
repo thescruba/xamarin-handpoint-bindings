@@ -5,9 +5,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Com.Handpoint.Api;
+using Com.Handpoint.Api.Applicationprovider;
 using Com.Handpoint.Api.Shared;
 using Java.Interop;
 using JustTouchMobile.Services.Payments;
+using Square.OkHttp3;
 using System;
 using System.Collections.Generic;
 using Application = Android.App.Application;
@@ -59,7 +61,30 @@ namespace JustTouchMobile.Droid.HandPoint {
 			return this.api.PrintReceipt (html);
 		}
 
-		public bool Refund(decimal amount) {
+        private string DownloadReceipt(String url) {
+            try {
+                ICall call = BuildGETCall(url);
+                Response response = call.Execute();
+                ResponseBody responseBody = response.Body();
+                if (responseBody != null) {
+                    return responseBody.String();
+                }
+            } catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
+            return null;
+        }
+
+        private ICall BuildGETCall(String url) {
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder()
+                    .Url(url)
+                    .Build();
+
+            return client.NewCall(request);
+        }
+
+        public bool Refund(decimal amount) {
 			throw new NotImplementedException();
 			//this.api.Refund();
 		}
@@ -69,36 +94,48 @@ namespace JustTouchMobile.Droid.HandPoint {
 
             if (this.api != null)
             {
-                Java.Math.BigInteger bigInteger = new Java.Math.BigInteger(amount.ToString());
-                return this.api.Sale(bigInteger, Currency.Usd);
+                try {
+                    Java.Math.BigInteger bigInteger = new Java.Math.BigInteger("1000");
+                    var currentAcctiity = ActivityProvider.CurrentActivity;
+                    var result =  this.api.Sale(bigInteger, Currency.Gbp);
+                    return result;
+                } catch (Exception ex) {
+                    Console.WriteLine(ex);
+                 }
             }
 
             return false;
 		}
 
         public void DeviceDiscoveryFinished(IList<Device> devices) {
+            Console.WriteLine($"DeviceDiscoveryFinished");
 
         }
 
         public void EndOfTransaction(TransactionResult result, Device device) {
-            
+            Console.WriteLine($"EndOfTransaction - {result}");
+            if (result.FinStatus == FinancialStatus.Authorised) {
+
+                var receipt = DownloadReceipt(result.CustomerReceipt);
+                if (!string.IsNullOrEmpty(receipt)) {
+                    Print(receipt);
+                }
+            }
+
         }
 
         public void TransactionResultReady(TransactionResult transactionResult, Device device) {
-            
+            Console.WriteLine($"TransactionResultReady - {transactionResult}");
+
         }
 
         public void SignatureRequired(SignatureRequest request, Device device) {
-           
+            Console.WriteLine($"SignatureRequired - {request}");
+
         }
 
         public void ConnectionStatusChanged(ConnectionStatus status, Device device) {
             Console.WriteLine($"ConnectionStatusChanged - {status}");
-            
-            if (status == ConnectionStatus.Connected) {
-                Sale(100);
-            }
-
         }
 
         public void CurrentTransactionStatus(StatusInfo info, Device device) {

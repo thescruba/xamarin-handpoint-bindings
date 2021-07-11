@@ -23,7 +23,7 @@
   <remove-node path="/api/package[starts-with (@name, 'io.reactivex.internal')]" />
   <remove-node path="/api/package[starts-with (@name, 'io.reactivex.subjects')]" />
   <remove-node path="/api/package[starts-with (@name, 'io.reactivex.observers')]" />
-  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.paymentsdk.emv')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.paymentsdk')]" />
   <remove-node path="/api/package[starts-with (@name, 'org.reactivestreams')]" />
   <remove-node path="/api/package[starts-with (@name, 'org.nibor.autolink')]" />
   <remove-node path="/api/package[starts-with (@name, 'com.sun.xml')]" />
@@ -47,6 +47,9 @@
   <remove-node path="/api/package[starts-with (@name, 'org.java_websocket')]" />
   <remove-node path="/api/package[starts-with (@name, 'org.jdom2')]" />
   <remove-node path="/api/package[starts-with (@name, 'com.google.protobuf')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.pusher')]" />
+  <remove-node path="/api/package[starts-with (@name, 'kotlin.reflect')]" />
+
 
 
   <!--

@@ -40,6 +40,16 @@ public class HandpointDelegate implements Events.Required, Events.ConnectionStat
         //HandpointCredentials handpointCredentials = new HandpointCredentials(sharedSecret, cloudKey);
         this.api = HapiFactory.getAsyncInterface(this, context, handpointCredentials);
 
+        device = new Device("Local Device", "0821638950-PAXA920", "", ConnectionMethod.ANDROID_PAYMENT);
+        Log.i(TAG,"Attempting to connect to device directly");
+
+        // this is to connect to the handpoint payment app via the cloud
+        /*HandpointCredentials handpointCredentials = new HandpointCredentials(sharedSecret,cloudKey);
+        Device device = new Device("Cloud Device", "0821638950-PAXA920", "", ConnectionMethod.CLOUD);
+        Log.i(TAG,"Attempting to connect to device via cloud");*/
+
+        this.api.connect(device);
+
     }
 
     public void connect(){
@@ -58,13 +68,13 @@ public class HandpointDelegate implements Events.Required, Events.ConnectionStat
     @Override
     public void connectionStatusChanged(ConnectionStatus status, Device device) {
         Log.i(TAG,"connectionStatusChanged " + status);
-        activity.printTransactionStatus("connectionStatusChanged " + status);
+       /* activity.printTransactionStatus("connectionStatusChanged " + status);
 
         if (status == ConnectionStatus.Connected) {
             activity.notifyConnectionStatus(true);
         } else if (status == ConnectionStatus.Disconnected) {
             activity.notifyConnectionStatus(false);
-        }
+        }*/
     }
 
     @Override
