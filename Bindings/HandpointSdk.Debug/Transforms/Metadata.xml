@@ -15,6 +15,6 @@
 <attr path="/api/package[@name='com.handpoint.api']/class[@name='Connection']" name="visibility">public</attr>
 
 <remove-node path="/api/package[@name='com.handpoint.api']/class[@name='AndroidPaymentConnection']" />
-
-
+<remove-node path="/api/package[@name='com.handpoint.api']/class[@name='AndroidConnectionManager']" />
+  
 </metadata>
