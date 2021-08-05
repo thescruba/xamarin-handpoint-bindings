@@ -7,70 +7,87 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
 
-<remove-node path="/api/package[starts-with (@name, 'com.fasterxml.jackson')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.pax.dal')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.pax.gl')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.pax.jemv')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.jacoco.agent')]" />
-<remove-node path="/api/package[starts-with (@name, 'javax')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.ctc.wstx')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.telpo')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.zkteco')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.codehaus')]" />
-<remove-node path="/api/package[starts-with (@name, 'retrofit2')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.vladium.emma')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.pax.nep')]" />
-<remove-node path="/api/package[starts-with (@name, 'io.reactivex.internal')]" />
-<remove-node path="/api/package[starts-with (@name, 'io.reactivex.subjects')]" />
-<remove-node path="/api/package[starts-with (@name, 'io.reactivex.observers')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.paymentsdk')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.reactivestreams')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.nibor.autolink')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.sun.xml')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.squareup.javapoet')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.x5')]" />
-<remove-node path="/api/package[starts-with (@name, 'net.minidev')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.apache')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.jvnet')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.threeten')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.w3c')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.xml')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.osama')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.j256.ormlite')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.squareup')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.izettle')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.fasterxml.jackson')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.pax.dal')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.pax.gl')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.pax.jemv')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.jacoco.agent')]" />
+  <remove-node path="/api/package[starts-with (@name, 'javax')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.ctc.wstx')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.telpo')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.zkteco')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.codehaus')]" />
+  <remove-node path="/api/package[starts-with (@name, 'retrofit2')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.vladium.emma')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.pax.nep')]" />
+  <remove-node path="/api/package[starts-with (@name, 'io.reactivex.internal')]" />
+  <remove-node path="/api/package[starts-with (@name, 'io.reactivex.subjects')]" />
+  <remove-node path="/api/package[starts-with (@name, 'io.reactivex.observers')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.paymentsdk')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.reactivestreams')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.nibor.autolink')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.sun.xml')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.squareup.javapoet')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.x5')]" />
+  <remove-node path="/api/package[starts-with (@name, 'net.minidev')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.apache')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.jvnet')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.threeten')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.w3c')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.xml')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.osama')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.j256.ormlite')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.squareup')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.izettle')]" />
 
-<remove-node path="/api/package[starts-with (@name, 'org.jsoup')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.objectweb')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.slf4j')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.bouncycastle')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.java_websocket')]" />
-<remove-node path="/api/package[starts-with (@name, 'org.jdom2')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.google.protobuf')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.jsoup')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.objectweb')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.slf4j')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.bouncycastle')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.java_websocket')]" />
+  <remove-node path="/api/package[starts-with (@name, 'org.jdom2')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.google.protobuf')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.pusher')]" />
+  <remove-node path="/api/package[starts-with (@name, 'kotlin.reflect')]" />
+
 
 
   <!--
   This is hack for object shared https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
   -->
-<remove-node path="/api/package[@name='com.handpoint.api.shared.agreements']/class[@name='MerchantAuth']/method[@name='size' and count(parameter)=0]" />
-<remove-node path="/api/package[@name='com.handpoint.api.shared.analytics.providers']/class[@name='NoPropertiesProvider']"/>
-<remove-node path="/api/package[@name='com.handpoint.api.shared.analytics.providers']/class[@name='SimplePropertiesProvider']"/>
+  <remove-node path="/api/package[@name='com.handpoint.api.shared.agreements']/class[@name='MerchantAuth']/method[@name='size' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.handpoint.api.shared.analytics.providers']/class[@name='NoPropertiesProvider']"/>
+  <remove-node path="/api/package[@name='com.handpoint.api.shared.analytics.providers']/class[@name='SimplePropertiesProvider']"/>
 
-<!--
+  <!--
   This is hack for networking shared https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/troubleshooting-bindings
   -->
 
-<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='keySet' and count(parameter)=0]" />
-<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='entrySet' and count(parameter)=0]" />
-<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='size' and count(parameter)=0]" />
-<remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='values' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='keySet' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='entrySet' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='size' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.handpoint.api.shared.networking.crapi']/class[@name='CrApiHeaders']/method[@name='values' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.handpoint.api.paymentsdk']/class[@name='InstancesManager']/method[@name='getEmvDataBuilder' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.handpoint.api.paymentsdk']/class[@name='InstancesManager']/method[@name='setCryptoProvider' and count(parameter)=1 and parameter[1][@type='com.handpoint.utils.crypto.CryptoProvider']]" />
 
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.cloud')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.txnfeed')]" />
 
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.printing')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.shared.networking')]" />
-<remove-node path="/api/package[starts-with (@name, 'com.handpoint.utils')]" />
-<remove-node path="/api/package[starts-with (@name, 'okhttp3')]" />
+
+  <!-- There are also some methods that need to have their generic _parameter_ types simplified to `java.lang.Object`.
+         Possible error message: Error CS0115: `SomeMethod(..., T, ...)' is marked as an override but no suitable method found to override (CS0115)
+         Possible error message: Error CS0535: `SomeClass' does not implement interface member `SomeMethod(..., Java.Lang.Object,...)' (CS0535)
+         Possible error message: Error CS0534: `SomeClass' does not implement inherited abstract member `SomeMethod(..., Java.Lang.Object,...)' (CS0534)
+<attr path="/api/package[@name='com.socialize.api']/class[@name='SocializeApi.AsyncAuthenicator']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='com.socialize.api.SocializeRequest']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+<attr path="/api/package[@name='com.socialize.api']/class[@name='SocializeApi.AsyncGetter']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='com.socialize.api.SocializeRequest']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+<attr path="/api/package[@name='com.socialize.api']/class[@name='SocializeApi.AsyncPutter']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='com.socialize.api.SocializeRequest']]/parameter[1]" name="managedType">Java.Lang.Object</attr>  -->
+
+
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.cloud')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.txnfeed')]" />
+
+  <!-- <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.shared.networking')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.api.printing')]" />
+  <remove-node path="/api/package[starts-with (@name, 'com.handpoint.utils')]" /> -->
+
+  <!--<remove-node path="/api/package[starts-with (@name, 'okhttp3')]" />-->
 
 </metadata>
