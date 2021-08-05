@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandpointSdk", "Bindings\Ha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandpointPaymentSDK", "Bindings\HandpointPaymentSDK\HandpointPaymentSDK.csproj", "{0E177195-595F-44B3-820D-0C83516CA75E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandpointSDKHelper", "Bindings\HandpointSDKHelper\HandpointSDKHelper.csproj", "{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandpointPaymentSDK.Debug", "Bindings\HandpointPaymentSDK.Debug\HandpointPaymentSDK.Debug.csproj", "{9E0FC3CA-2C51-467E-B12E-79380B2900E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandpointSdk.Debug", "Bindings\HandpointSdk.Debug\HandpointSdk.Debug.csproj", "{A7FCDFE2-49FD-4CB0-A68F-41D74D698AF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,18 +33,17 @@ Global
 		{0E177195-595F-44B3-820D-0C83516CA75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E177195-595F-44B3-820D-0C83516CA75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E177195-595F-44B3-820D-0C83516CA75E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0FC3CA-2C51-467E-B12E-79380B2900E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0FC3CA-2C51-467E-B12E-79380B2900E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0FC3CA-2C51-467E-B12E-79380B2900E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0FC3CA-2C51-467E-B12E-79380B2900E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7FCDFE2-49FD-4CB0-A68F-41D74D698AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7FCDFE2-49FD-4CB0-A68F-41D74D698AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7FCDFE2-49FD-4CB0-A68F-41D74D698AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7FCDFE2-49FD-4CB0-A68F-41D74D698AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{58A4D129-DF32-48C2-947E-0EFC6E989812} = {9641E83D-30CC-4706-A7C9-7AD0C4F60E3F}
-		{0E177195-595F-44B3-820D-0C83516CA75E} = {9641E83D-30CC-4706-A7C9-7AD0C4F60E3F}
-		{EE3E5AE8-B3C7-4ACD-A9D4-EFC84D53B653} = {9641E83D-30CC-4706-A7C9-7AD0C4F60E3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5329801-B55D-446D-809B-89D9B401EAD5}

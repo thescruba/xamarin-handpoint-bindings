@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <Button
+        android:id="@+id/connectCardReader"
+        android:text="Connect Card Reader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/disconnectCardReader"
+        android:text="Disconnect Card Reader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/payNowBtn"
+        android:text="Pay Now"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/textConsole"
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
+        android:layout_margin="@dimen/dp2"
+        android:background="#000000"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|center_horizontal|top"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
