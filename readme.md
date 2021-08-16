@@ -10,6 +10,8 @@ The example and implementation has been tested and targeted to the Native integr
 
 There is also a Native Android java example that follows from example here: https://www.handpoint.com/docs/device/Android/#elem_2AndroidTerminalIntegration
 
+##The Xamarin SDK is not officially maintained by Handpoint, the SDK bindings were provided by the community of developers using the Handpoint Android SDK as a tool to help Xamarin developers get started with the integration. 
+
 ## Structure
 
 - Android.HandpointSDKExample
